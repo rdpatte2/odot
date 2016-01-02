@@ -1,7 +1,9 @@
-Odot::Application.routes.draw do
+Rails.application.routes.draw do
+
   resources :todo_lists do
     resources :todo_items
-end
+  end
+  resources :todo_lists
   root 'todo_lists#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
